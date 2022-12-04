@@ -1,5 +1,5 @@
 fn main() {
-    let prios = include_str!("../input")
+    let sum = include_str!("../input")
         .lines()
         .map(|inp| inp.split_at(inp.len() / 2))
         // Find character that is contained in both strings
@@ -8,5 +8,5 @@ fn main() {
         .map(|char| if char > 90 { char - 96 } else { char - 38 })
         .sum::<u32>();
 
-    println!("{}", prios);
+    println!("{}", sum);
 }
